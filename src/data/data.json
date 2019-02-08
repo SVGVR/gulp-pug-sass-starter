@@ -1,0 +1,10 @@
+{
+	"global": {
+		"author": "SVGVR",
+		"title": "Gulp-Pug-Start",
+		"content": "Simple boilerplate for Gulp-Pug-Sass stack"
+	},
+	"index": {
+		"message": "Hello and Welcome!"
+	}
+}

@@ -1,0 +1,26 @@
+extends _layouts/main
+
+block head_end
+
+    include _partials/welcome
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid asperiores consectetur cupiditate, deleniti eius est illum in incidunt iure modi nobis nulla odit officia placeat porro quia quo totam?
+
+block body_end
+    script.
+        let text = "#{index.message}";
+        let string = '';
+        for(let i = 0; i < text.length; i++) {
+            string+= "<span class='animate-text'>" + text.charAt(i) + "</span>";
+        }
+        const welcome = $('.welcome');
+        welcome.html(string);
+        $(document).ready(function () {
+            const tl = new TimelineLite();
+            tl.staggerFrom($('.animate-text'), .2, {left: 100, autoAlpha: 0}, 0.1);
+            tl.to(welcome, .3, {
+                y: 300, autoAlpha: 0, onComplete: function () {
+                    welcome.html("#{global.title}");
+                }
+            }, '+= 1');
+            tl.to(welcome, .4, {y: 0, autoAlpha: 1});
+        });
