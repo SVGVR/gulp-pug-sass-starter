@@ -1,5 +1,5 @@
 {
-  "name": "gulp-pug-start",
+  "name": "gulp-pug-sass-start",
   "version": "1.0.0",
   "description": "Simple boilerplate for Gulp-Pug-Sass stack",
   "main": "gulpfile.js",

@@ -3,7 +3,8 @@ extends _layouts/main
 block head_end
 
     include _partials/welcome
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid asperiores consectetur cupiditate, deleniti eius est illum in incidunt iure modi nobis nulla odit officia placeat porro quia quo totam?
+    div.container
+        p.animation-appears Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid asperiores consectetur cupiditate, deleniti eius est illum in incidunt iure modi nobis nulla odit officia placeat porro quia quo totam?
 
 block body_end
     script.
@@ -23,4 +24,6 @@ block body_end
                 }
             }, '+= 1');
             tl.to(welcome, .4, {y: 0, autoAlpha: 1});
+            tl.from($('.animation-appears'), 1, {x: 300, autoAlpha: 0});
+            tl.from($('img'), .3, {y: -200, autoAlpha: 0});
         });

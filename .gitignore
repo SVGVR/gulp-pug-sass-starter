@@ -3,5 +3,5 @@ node_modules
 .sass-cache
 *.thumb
 npm-debug.log
-dest/
+dest
 yarn.lock
